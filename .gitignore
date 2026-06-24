@@ -1,0 +1,13 @@
+bin/
+obj/
+.vs/
+
+*.user
+*.suo
+
+TestResults/
+
+.coverage
+.coveragexml
+
+publish/
