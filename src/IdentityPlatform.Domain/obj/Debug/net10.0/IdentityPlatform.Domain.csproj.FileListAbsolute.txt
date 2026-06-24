@@ -1,0 +1,12 @@
+D:\Repos\identity-platform\src\IdentityPlatform.Domain\bin\Debug\net10.0\IdentityPlatform.Domain.deps.json
+D:\Repos\identity-platform\src\IdentityPlatform.Domain\bin\Debug\net10.0\IdentityPlatform.Domain.dll
+D:\Repos\identity-platform\src\IdentityPlatform.Domain\bin\Debug\net10.0\IdentityPlatform.Domain.pdb
+D:\Repos\identity-platform\src\IdentityPlatform.Domain\obj\Debug\net10.0\IdentityPlatform.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Repos\identity-platform\src\IdentityPlatform.Domain\obj\Debug\net10.0\IdentityPlatform.Domain.AssemblyInfoInputs.cache
+D:\Repos\identity-platform\src\IdentityPlatform.Domain\obj\Debug\net10.0\IdentityPlatform.Domain.AssemblyInfo.cs
+D:\Repos\identity-platform\src\IdentityPlatform.Domain\obj\Debug\net10.0\IdentityPlatform.Domain.csproj.CoreCompileInputs.cache
+D:\Repos\identity-platform\src\IdentityPlatform.Domain\obj\Debug\net10.0\IdentityPlatform.Domain.sourcelink.json
+D:\Repos\identity-platform\src\IdentityPlatform.Domain\obj\Debug\net10.0\IdentityPlatform.Domain.dll
+D:\Repos\identity-platform\src\IdentityPlatform.Domain\obj\Debug\net10.0\refint\IdentityPlatform.Domain.dll
+D:\Repos\identity-platform\src\IdentityPlatform.Domain\obj\Debug\net10.0\IdentityPlatform.Domain.pdb
+D:\Repos\identity-platform\src\IdentityPlatform.Domain\obj\Debug\net10.0\ref\IdentityPlatform.Domain.dll
