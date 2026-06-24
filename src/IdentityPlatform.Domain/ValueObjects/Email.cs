@@ -1,4 +1,6 @@
-﻿using System.Text.RegularExpressions;
+﻿using IdentityPlatform.Domain.Exceptions;
+using System.Text.RegularExpressions;
+
 
 namespace IdentityPlatform.Domain.ValueObjects;
 
@@ -17,12 +19,12 @@ public sealed class Email
     public Email(string value)
     {
         if (string.IsNullOrWhiteSpace(value))
-            throw new ArgumentException("Email cannot be empty.", nameof(value));
+            throw new DomainException("Email cannot be empty.");
 
         value = value.Trim().ToLowerInvariant();
 
         if (!EmailRegex.IsMatch(value))
-            throw new ArgumentException("Email format is invalid.", nameof(value));
+            throw new DomainException("Email format is invalid.");
 
         Value = value;
     }

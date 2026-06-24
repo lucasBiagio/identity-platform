@@ -1,4 +1,5 @@
-﻿using IdentityPlatform.Domain.ValueObjects;
+﻿using IdentityPlatform.Domain.Exceptions;
+using IdentityPlatform.Domain.ValueObjects;
 
 namespace IdentityPlatform.UnitTests.ValueObjects;
 
@@ -22,7 +23,7 @@ public class EmailTests
         var value = "email-invalido";
 
         // Act & Assert
-        Assert.Throws<ArgumentException>(() =>
+        Assert.Throws<DomainException>(() =>
             new Email(value));
     }
 }

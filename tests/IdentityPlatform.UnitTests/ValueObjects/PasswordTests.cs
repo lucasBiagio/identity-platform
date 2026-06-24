@@ -1,4 +1,5 @@
-﻿using IdentityPlatform.Domain.ValueObjects;
+﻿using IdentityPlatform.Domain.Exceptions;
+using IdentityPlatform.Domain.ValueObjects;
 
 namespace IdentityPlatform.UnitTests.ValueObjects;
 
@@ -20,21 +21,21 @@ public class PasswordTests
     [Fact]
     public void Should_Throw_Exception_When_Password_Is_Too_Short()
     {
-        Assert.Throws<ArgumentException>(() =>
+        Assert.Throws<DomainException>(() =>
             new Password("123"));
     }
 
     [Fact]
     public void Should_Throw_Exception_When_Password_Has_No_Number()
     {
-        Assert.Throws<ArgumentException>(() =>
+        Assert.Throws<DomainException>(() =>
             new Password("MinhaSenha"));
     }
 
     [Fact]
     public void Should_Throw_Exception_When_Password_Has_No_Letter()
     {
-        Assert.Throws<ArgumentException>(() =>
+        Assert.Throws<DomainException>(() =>
             new Password("12345678"));
     }
 }
