@@ -47,4 +47,17 @@ public class User : BaseEntity
     {
         IsActive = true;
     }
+
+    private readonly List<Role> _roles = [];
+
+    public IReadOnlyCollection<Role> Roles =>
+        _roles.AsReadOnly();
+
+    public void AssignRole(Role role)
+    {
+        if (_roles.Any(x => x.Id == role.Id))
+            return;
+
+        _roles.Add(role);
+    }
 }
