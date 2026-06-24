@@ -1,4 +1,5 @@
 ﻿using IdentityPlatform.Domain.Common;
+using IdentityPlatform.Domain.ValueObjects;
 
 namespace IdentityPlatform.Domain.Entities;
 
@@ -8,7 +9,7 @@ public class User : BaseEntity
 
     public string LastName { get; private set; } = string.Empty;
 
-    public string Email { get; private set; } = string.Empty;
+    public Email Email { get; private set; } = null!;
 
     public string PasswordHash { get; private set; } = string.Empty;
 
@@ -30,7 +31,7 @@ public class User : BaseEntity
 
         FirstName = firstName;
         LastName = lastName;
-        Email = email;
+        Email = new Email(email);
         PasswordHash = passwordHash;
 
         IsActive = true;
