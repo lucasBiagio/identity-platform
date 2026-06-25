@@ -7,21 +7,23 @@ namespace IdentityPlatform.Application.Features.Users.RegisterUser;
 public class RegisterUserUseCase
 {
     private readonly IUserRepository _userRepository;
+    private readonly IPasswordHasher _passwordHasher;
 
     public RegisterUserUseCase(
-        IUserRepository userRepository)
+        IUserRepository userRepository,
+        IPasswordHasher passwordHasher)
     {
         _userRepository = userRepository;
+        _passwordHasher = passwordHasher;
     }
 
     public async Task<Result<RegisterUserResponse>> ExecuteAsync(
         RegisterUserRequest request,
         CancellationToken cancellationToken = default)
     {
-        var emailExists =
-            await _userRepository.ExistsByEmailAsync(
-                request.Email,
-                cancellationToken);
+        var emailExists = await _userRepository.ExistsByEmailAsync(
+            request.Email,
+            cancellationToken);
 
         if (emailExists)
         {
@@ -29,11 +31,13 @@ public class RegisterUserUseCase
                 "Email already registered.");
         }
 
+        var passwordHash = _passwordHasher.Hash(request.Password);
+
         var user = new User(
             request.FirstName,
             request.LastName,
             request.Email,
-            request.Password);
+            passwordHash);
 
         await _userRepository.AddAsync(
             user,
